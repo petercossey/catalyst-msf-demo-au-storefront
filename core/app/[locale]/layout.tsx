@@ -26,6 +26,8 @@ import { MakeswiftProvider } from '~/lib/makeswift/provider';
 
 import { getToastNotification } from '../../lib/server-toast';
 
+import { VWOScript } from 'vwo-smartcode-nextjs'
+
 import '~/lib/makeswift/components';
 
 const RootLayoutMetadataQuery = graphql(
@@ -118,6 +120,7 @@ export default async function RootLayout({ params, children }: Props) {
       <html className={clsx(fonts.map((f) => f.variable))} lang={locale}>
         <head>
           <SiteTheme />
+          <VWOScript accountId="1127838" />
         </head>
         <body className="flex min-h-screen flex-col">
           <NextIntlClientProvider>
